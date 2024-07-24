@@ -11,7 +11,10 @@ export { ArrowDown } from './ArrowDown';
 export { ArrowUp } from './ArrowUp';
 export { Baby } from './Baby';
 export { BadgeAlert } from './BadgeAlert';
+export { BookText } from './BookText'
+export { BookCheck } from "./BookCheck"
 export { Bold } from './Bold';
+export { Building } from "./Building"
 export { Calendar } from './Calendar';
 export { CalendarDays } from './CalendarDays';
 export { Check } from './Check';
@@ -31,6 +34,9 @@ export { Ear } from './Ear';
 export { Fan } from './Fan';
 export { GalleryHorizontal } from './GalleryHorizontal';
 export { Github } from './Github';
+export { GraduationCap } from "./GraduationCap"
+export { HandHeart } from "./HandHeart"
+export { HeartPulse } from "./HeartPulse"
 export { Info } from './Info';
 export { Italic } from './Italic';
 export { Lamp } from './Lamp';
@@ -38,11 +44,16 @@ export { LayoutPanelLeft } from './LayoutPanelLeft';
 export { LifeBuoy } from './LifeBuoy';
 export { LogOut } from './LogOut';
 export { Mail } from './Mail';
+export { Medal } from "./Medal"
+export { MessageCircleQuestion } from './MessageCircleQuestion'
 export { MenuSquare } from './MenuSquare';
 export { MessageSquare } from './MessageSquare';
+export { MessageSquareWarning } from './MessageSquareWarning'
 export { MoonStar } from './MoonStar';
 export { Plus } from './Plus';
+export { PiggyBank } from "./PiggyBank"
 export { PlusCircle } from './PlusCircle';
+export { QrCode } from './QrCode'
 export { Search } from './Search';
 export { Sparkles } from './Sparkles';
 export { Sun } from './Sun';

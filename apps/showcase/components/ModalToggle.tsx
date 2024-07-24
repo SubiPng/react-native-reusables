@@ -1,6 +1,6 @@
 import { router } from 'expo-router';
 import { Pressable, View } from 'react-native';
-import { CircleUserRound } from '~/lib/icons/CircleUserRound';
+import { QrCode } from '~/lib/icons/QrCode';
 import { cn } from '~/lib/utils';
 
 export function ModalToggle() {
@@ -18,7 +18,7 @@ export function ModalToggle() {
             pressed && 'opacity-70'
           )}
         >
-          <CircleUserRound className='text-foreground' size={24} strokeWidth={1.25} />
+          <QrCode className='text-foreground' size={24} strokeWidth={1.5} />
         </View>
       )}
     </Pressable>

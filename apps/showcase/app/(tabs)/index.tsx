@@ -1,4 +1,16 @@
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
+import {
+  BookCheck,
+  Building,
+  GraduationCap,
+  HandHeart,
+  HeartPulse,
+  Medal,
+  MessageCircleQuestion,
+  MessageSquareWarning,
+  PiggyBank,
+} from 'lucide-react-native';
+import { colorScheme } from 'nativewind';
 import * as React from 'react';
 import { Platform, View } from 'react-native';
 import {
@@ -52,11 +64,11 @@ import { cn } from '~/lib/utils';
 
 export default function ExampleScreen() {
   return (
-    <View className='flex-1 p-6 justify-center gap-6'>
-      <Card className='w-full max-w-lg mx-auto'>
+    <View className='flex-1 p-6 gap-6'>
+      <Card className='w-full max-w-lg mx-aut'>
         <CardHeader>
-          <View className='flex-row gap-3'>
-            <CardTitle className='pt-1'>Team Members</CardTitle>
+          <View className='flex-row  gap-3'>
+            <CardTitle className='pt-1'>Student</CardTitle>
             <Tooltip delayDuration={150}>
               <TooltipTrigger className='web:focus:outline-none'>
                 <Info size={Platform.OS == 'web' ? 14 : 16} className='text-foreground' />
@@ -72,7 +84,7 @@ export default function ExampleScreen() {
               </TooltipContent>
             </Tooltip>
           </View>
-          <CardDescription>Invite your team members to collaborate.</CardDescription>
+          <CardDescription>This is your own personal student profile. </CardDescription>
         </CardHeader>
         <CardContent className='gap-8'>
           <View className='flex-row gap-3'>
@@ -80,35 +92,104 @@ export default function ExampleScreen() {
               <TeamMemberAvatar
                 initials='ZN'
                 name='Zach Nugent'
-                uri='https://github.com/mrzachnugent.png'
+                uri='https://github.com/SubiPng.png'
               />
               <View className='flex-1'>
-                <TeamMemberHoverCard name='Zach Nugent' />
+                <TeamMemberHoverCard name='Aiman Haqimi' />
                 <Text numberOfLines={1} className='text-muted-foreground'>
-                  zachnugent@example.com
+                  aimanhaqimi@example.com
                 </Text>
               </View>
             </View>
-            <RoleDropdownSelect defaultValue='Billing' />
+            <RoleDropdownSelect defaultValue='Stupid' />
           </View>
-          <View className='flex-row gap-3'>
-            <View className='flex-1 flex-row gap-3'>
-              <TeamMemberAvatar initials='JD' name='Jane Doe' uri='invalid link' />
-              <View className='flex-1'>
-                <TeamMemberHoverCard name='Jane Doe' />
-                <Text numberOfLines={1} className='text-muted-foreground'>
-                  jane@example.com
-                </Text>
-              </View>
-            </View>
-            <RoleDropdownSelect defaultValue='Owner' />
-          </View>
+          <View className='flex-row gap-3'></View>
         </CardContent>
       </Card>
+      <View className='flex-1 justify-center items-center gap-5 basis-0'>
+        <View className='items-center gap-5 flex-row '>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('academic')}
+          >
+            <GraduationCap className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Academic</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <Building className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Residental</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <PiggyBank className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Financial</Text>
+          </Button>
+        </View>
+        <View className='gap-5 flex-row '>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <BookCheck className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Attendance</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <Medal className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Activities</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <MessageSquareWarning className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Disciplinary</Text>
+          </Button>
+        </View>
+        <View className='gap-5 flex-row'>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <HandHeart className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>Welfare</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <MessageCircleQuestion className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>FaQ</Text>
+          </Button>
+          <Button
+            variant='outline'
+            style={{ height: 110, width: 110 }}
+            onPress={() => router.push('/job-details/')}
+          >
+            <HeartPulse className='text-foreground' size={45} strokeWidth={1.25} />
+            <Text>MAC</Text>
+          </Button>
+        </View>
+      </View>
       <View className='items-center'>
         <Link href='/form' asChild>
           <Button variant='link' className='flex-row'>
-            <Text>Go To Form</Text>
+            <Text>Go To Service Desk</Text>
             <ChevronRight className='text-foreground' size={18} />
           </Button>
         </Link>
@@ -171,6 +252,18 @@ function RoleDropdownSelect({ defaultValue }: { defaultValue: string }) {
             className={cn('flex-col items-start gap-1', value === 'Owner' ? 'bg-secondary/70' : '')}
           >
             <Text>Owner</Text>
+            <Muted>Admin-level access to all resources</Muted>
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onPress={() => {
+              setValue('Stupid');
+            }}
+            className={cn(
+              'flex-col items-start gap-1',
+              value === 'Stupid' ? 'bg-secondary/70' : ''
+            )}
+          >
+            <Text>Stupid</Text>
             <Muted>Admin-level access to all resources</Muted>
           </DropdownMenuItem>
         </DropdownMenuGroup>
