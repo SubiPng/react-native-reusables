@@ -1,5 +1,6 @@
 export { Activity } from './Activity';
 export { Airplay } from './Airplay';
+export { ALargeSmall } from "./ALargeSmall"
 export { AlarmClockIcon } from './AlarmClockIcon';
 export { AlertCircle } from './AlertCircle';
 export { AlertTriangle } from './AlertTriangle';
@@ -15,6 +16,7 @@ export { BookText } from './BookText'
 export { BookCheck } from "./BookCheck"
 export { Bold } from './Bold';
 export { Building } from "./Building"
+export { Calculator } from "./Calculator"
 export { Calendar } from './Calendar';
 export { CalendarDays } from './CalendarDays';
 export { Check } from './Check';
@@ -47,6 +49,7 @@ export { Mail } from './Mail';
 export { Medal } from "./Medal"
 export { MessageCircleQuestion } from './MessageCircleQuestion'
 export { MenuSquare } from './MenuSquare';
+export { NotebookTabs } from "./NotebookTabs"
 export { MessageSquare } from './MessageSquare';
 export { MessageSquareWarning } from './MessageSquareWarning'
 export { MoonStar } from './MoonStar';
@@ -56,8 +59,10 @@ export { PlusCircle } from './PlusCircle';
 export { QrCode } from './QrCode'
 export { Search } from './Search';
 export { Sparkles } from './Sparkles';
+export { Stamp } from "./Stamp"
 export { Sun } from './Sun';
 export { Table } from './Table';
+export { Table2 } from "./Table2"
 export { Terminal } from './Terminal';
 export { Underline } from './Underline';
 export { UserPlus } from './UserPlus';
